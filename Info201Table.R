@@ -21,11 +21,11 @@ c_data <- data %>%
   select(c(location, Population, Reporting_year, S1_GHG_emissions, Year_of_emission, S2_GHG_emissions, Total_emissions, Emissions_Quality_Flag)) 
 
 c_data_na <- c_data %>%
-  filter(!is.na(Total_emissions)) %>%
-  group_by(Emissions_Quality_Flag)
+  filter(!is.na(Total_emissions))
 
 sort <- sort %>%
-  mutate(Emissions_per_person = Total_emissions/Population)
+  mutate(Emissions_per_person = round(Total_emissions/Population, 2)) %>%
+  group_by(Emissions_Quality_Flag)
 
 sort <- sort[order(sort$Emissions_per_person), , drop = FALSE]
 sort <- sort[order(sort$Emissions_Quality_Flag), , drop = FALSE]
