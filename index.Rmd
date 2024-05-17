@@ -7,7 +7,7 @@ output: html_document
 
 ### Ryan Kang (kangryan@uw.edu), Annabelle Fallstrom(afalls@uw.edu), Tyler Nguyen (tyjn@uw.edu), Don Vo (donvo@uw.edu)
 
-### April 30, 2024
+### May 17, 2024
 
 Spring 2024
 
@@ -117,6 +117,7 @@ Sources:
 > The implications for technology, designers, and policymakers would be changes to combat climate change. Assuming we properly answered our research questions, we should see a trend in greenhouse gas emissions and rising carbon dioxide emissions. Coupled with the rising sea levels and ever-increasing heat, our data should show an increasing trend in carbon emissions over the years. This is most prominent in the big cities, where most of our data is from. Due to their massive scale, Big businesses and companies are the leading causes of rising levels of carbon dioxide in the atmosphere. Our data should expose this and shed more light on this topic. This should cause policymakers to make new policies to limit greenhouse gas emissions. This would also cause businesses and scientists to innovate and find new ways to limit emissions to comply with new regulations. Limiting major corporations' greenhouse gas emissions will massively reduce the emissions in the atmosphere. Limitations & Challenges
 
 5. Limitations & Challenges
+
 > Some limitations to address with our project would be data on smaller countries, cities, and locations without the technology to record data properly. Our data isn’t fully complete; most of the data from our data set was self-reported rather than hand-collected. We have to count for slight inaccuracies in our data analysis. 
 In our project proposal, we targeted many different effects of climate change. It could be challenging to manage and properly analyze all the data. Studying all the different side effects of climate change could make our proposal too broad and limit its effectiveness. Comparatively, if we only focused on one specific part of climate change, we could come up with a much deeper conclusion in that specific topic. However, that would make our proposal too narrow in scope. In our proposal, we must find the middle ground of covering all of our topics while fully answering our research questions.
 
@@ -145,7 +146,52 @@ Describe why you chose this chart and what information it reveals
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+---
+title: "Top 10 Countries with Highest CO2 Emissions"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# Load libraries
+library(dplyr)
+library(readxl)
+library(ggplot2)
+```
+
+```{r}
+# Load the data using the absolute path
+file_path <- "C:/Users/ryan1/OneDrive/Desktop/INFO201/exploratory-analysis-ryan1kang03/SCRIPTS/DATA/D_FINAL.xlsx"
+emissions_data <- read_excel(file_path, sheet = 1)
+
+# Select relevant columns
+emissions_data <- emissions_data %>% 
+  select(`Scope-1 GHG emissions [tCO2 or tCO2-eq]`, `Total emissions (CDP) [tCO2-eq]`, Country)
+
+# Rename columns for convenience
+colnames(emissions_data) <- c("Scope1_Emissions", "Total_Emissions_CDP", "Country")
+
+# Sort the data by Total Emissions (CDP) column in descending order
+sorted_data <- emissions_data %>% arrange(desc(Total_Emissions_CDP))
+
+# Select the top 10 countries
+top_10_countries <- head(sorted_data, 10)
+
+# Print the data to verify
+print(top_10_countries)
+```
+
+```{r}
+# Create the bar chart
+ggplot(top_10_countries, aes(x = reorder(Country, -Total_Emissions_CDP), y = Total_Emissions_CDP, fill = Country)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("darkseagreen2", "darkseagreen", "darkolivegreen", "darkgreen", "black", 
+                               "darkseagreen2", "darkseagreen", "darkolivegreen", "darkgreen", "black")) +
+  labs(x = "Country", y = "Total Emissions (CDP) [tCO2-eq]", title = "Top 10 Countries with Highest CO2 Emissions (CDP)") +
+  theme_minimal()
 ```
 
 ### Chart 2
