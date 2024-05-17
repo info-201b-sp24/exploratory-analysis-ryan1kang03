@@ -3,53 +3,129 @@ title: "Exploratory Analysis"
 output: html_document
 ---
 
-## Climate Change Effects
-
-Give your project a concise, interesting title that summarizes the entirety of your project
+## Climate Change Affects
 
 ### Ryan Kang (kangryan@uw.edu), Annabelle Fallstrom(afalls@uw.edu), Tyler Nguyen (tyjn@uw.edu), Don Vo (donvo@uw.edu)
 
-Names of your team members
-
-### 5/17/2024
+### April 30, 2024
 
 Spring 2024
 
-### Abstract
+## Abstract
 
 The primary objective is to rigorously analyze the effects of climate change across diverse facets and observe its impact on our planet’s various environmental domains–ecological, hydrological, oceanic, glaciological, and atmospheric systems. Through systematic data collection, we seek to highlight the specific impacts of climate change on the various environmental factors and explore their interrelations. Ultimately, the insights from our research are intended to inform and refine strategies for mitigation, adaptation, and response to the emergent challenges posed by our Earth’s devastating direction of climate change.
 
-### Climate Change, Global Warming, Carbon Footprint
+## Keywords
+
+Climate Change, Global Warming, Carbon Footprint
+
+## Proposal
+
+1. Introduction  
+
+> Climate change has become a global epidemic, with human activities strongly impacting the Earth’s biodiversity, ecosystems, and, ultimately, the atmosphere. This causes tremendous concerns as these climate changes negatively influence other important natural resources such as our terrestrial, oceanic, glaciological, and hydrological ecosystems. As the effects of climate change multiply through the years to come, it is imperative to inform ourselves of its impacts and explore effective mitigation and adaptation strategies. This project aims to investigate the multifaceted effects of climate change on various environmental ecosystems and provide insights. 
+
+> Research Questions:
+- How has the frequency of intense weather events changed over the past 50 years?
+
+    - With this data, we could identify the severity of our climate change regarding natural disasters. Analyzing this data leads us to another question about climate temperature changes through the years.
+- How have temperatures changed throughout the past 50 years in the North, West, South, and East sections of the world?
+
+    - This data would help us understand possible hypotheses correlating temperature changes to other environmental factors, such as natural disasters.
+- How has the ocean changed in the past 50 years in regards to acidity and sea levels?
+
+    - When collecting climate change data, we would also need to dig deeper into the changes of our oceanic domain, to fully grasp how the acidity and sea levels correspond to the changes in our climate.
+- What was the carbon footprint in the past 50 years?
+
+    - Carbon footprint estimates the total emission volume of greenhouse gases, including carbon dioxide and other harmful chemicals. With this data, we could theoretically figure out how much carbon dioxide and other greenhouse gasses pose a harmful risk to our environment and the connection it makes to the everlasting effects of climate change.
 
 
-3-5 keywords that summarize your project.
-(e.g., "Keywords: human physiology; bicycle exercise; Gen Z; times-series data")
+2. Related Work  
 
-### Introduction  
+> As our topic, climate change is a major global issue; many others have also contributed to research involving what it could mean for the world as global temperatures continue to rise. Organizations such as NASA have already begun to address some of these consequences and dedicated pages on their websites specifically to raise awareness of what it could mean globally and for different regions across the United States. Here, we can see effects such as rising sea levels, hurricanes, droughts, heat waves, wildfires, flooding, and melting ice caps, all predicted to worsen if not addressed (1). Organizations have also been formed solely dedicated to the issue of climate change, like the Climate Impact Lab, which has done extensive research on the matter, lending to more in-depth insights. They provide similar data visualizations to what we hope to achieve on their impact map page, showing where global warming affects the most, and have pages dedicated to individual contributors and the consequences of climate change (2). They also use their data to predict how temperatures will look in the future depending on emission levels, emphasizing the effect humans can have on climate change. Fortunately, news of these changes is making its way to the public through news sources like BBC, which previously had an article on how climate change was impacting the melting of the arctic ice, detailing how it will ultimately affect sea levels and urging the public to take greater action (3).
 
-Briefly introduce your project.  Include 3-5 research questions. What motivates the questions? Why are they important? (at least 200 words)
+Sources:
+- “Effects - NASA Science.” NASA, science.nasa.gov/climate-change/effects/.
+- “Impact Map.” Climate Impact Lab, 22 Dec. 2023, impactlab.org/map/.
+- Poynting, Mark. “Sea-Level Rise: West Antarctic Ice Shelf Melt ‘Unavoidable.’” BBC News, BBC, 23 Oct. 2023, www.bbc.com/news/science-environment-67171231.
 
-### Related Work  
 
-Describe your topic and related work in this space. You must include 3 citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ) Please use a standard citation style of your choice. (at least 200 words)
+3. The Dataset
 
-### The Dataset
+> Data was found on PANGEA, an open-access library for georeferenced data from earth system research. (https://doi.pangaea.de/10.1594/PANGAEA.884141)  
+> Here are all of the authors and contributors to this dataset, consisting mostly of scientists who research at universities or institutes: 
+    
+    1. Laboratoire des Sciences du Climat et de l’Environnement CEA CNRS UVSQ Institut Pierre-Simon Laplace, Gif-sur-Yvette, France
 
-Where did you find the data? Please include a link to the data source  
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
+    2. Cathy Nangini, Anna Peregon, Philippe Ciais, François-Marie Bréon & Yilong Wang
 
-### Implications
+    3. Mercator Research Institute on Global Commons and Climate Change, Berlin, Germany
 
-Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
+    4. Ulf Weddige & Felix Creutzig
 
-### Limitations & Challenges
-What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
+    5. Climate Research Division, Environment and Climate Change Canada, Toronto, Canada
+
+    6. Felix Vogel
+    
+    7. Peking University Shenzhen Graduate School, Key Laboratory for Human and Environmental Science and Technology, Shenzhen, China
+
+    8. Jun Wang
+
+    9. CDP Worldwide, London, England
+
+    10. Simeran Bachra, Kyra Appleby & Sara Telahoun
+
+    11. Arizona State University, Arizona, USA
+
+    12. Kevin Gurney
+
+    13. National Institute for Environmental Studies, Tsukuba, Japan
+
+    14. Yoshiki Yamagata
+
+    15. Global Carbon Project, CSIRO Oceans and Atmosphere, Canberra, Australia
+
+    16. Josep G. Canadell
+
+    17. International Institute for Applied Systems Analysis, Laxenburg, Austria
+
+    18. Arnulf Grübler
+
+    19. Department of Energy, Environment and Climate Change, Asian Institute of Technology, Klong Luang, Pathumthani, Thailand
+
+    20. Shobhakar Dhakal
+
+    21. Sustainability Economics of Human Settlements, Technical University Berlin, Berlin, Germany
+
+    22. Felix Creutzig  
+
+> First, the researchers scoped the data from the Carbon Disclosure Project (CDP) about greenhouse gas emissions. This data was collected through online response systems, where people could report climate hazards. Governments disclosed emissions data. Then, they separated CO2 emissions from non-CO2 greenhouse gas emissions. Then, they integrated datasets about emissions from developing countries from the Carbon Climate Registry.  
+
+> Since cities are concentrations of population, energy use, and economic output, they are important focal points for investigating emission drivers and mitigation options. This prompts across-city comparative analyses of greenhouse gas emissions and energy use. 
+
+> There are 344 observation (rows) in the data.  
+
+> There are 180 features (columns) in the data.  
+
+> The authors declare that there are no competing interests for this dataset. We would like to consider the political and policy implications of the findings of this data and hold those responsible for the emissions accountable. 
+
+> One possible limitation of this dataset is that the data collected by the Carbon Disclosure Project relies on self-reported data about climate hazards and emissions from cities. The problem is that cities could have a political agenda and might disclose fewer emissions than they produced. It also means that the data is a bit biased; cities self-select to disclose their emissions data, meaning many cities can choose not to disclose their emissions data. This means the sample of data is non-random. This data is also intended to compare carbon dioxide emissions across many cities but only has information on 343 cities, a fraction of the cities in the entire world. Since these cities chose to declare their carbon dioxide emissions and have the means to track them, there might not be enough diversity among the cities to have a good comparison. This diversity would include city size, economic standing, geographic factors, and city production. Diversity among cities is important to narrow down what factors contribute to climate change. Such a small sample size might not be able to do this. The creators of this dataset also do not define a city. Is it determined by area? Population? Governments? This is an important aspect to consider when comparing cities since we need to know what we are comparing.
+
+
+4. Implications
+
+> The implications for technology, designers, and policymakers would be changes to combat climate change. Assuming we properly answered our research questions, we should see a trend in greenhouse gas emissions and rising carbon dioxide emissions. Coupled with the rising sea levels and ever-increasing heat, our data should show an increasing trend in carbon emissions over the years. This is most prominent in the big cities, where most of our data is from. Due to their massive scale, Big businesses and companies are the leading causes of rising levels of carbon dioxide in the atmosphere. Our data should expose this and shed more light on this topic. This should cause policymakers to make new policies to limit greenhouse gas emissions. This would also cause businesses and scientists to innovate and find new ways to limit emissions to comply with new regulations. Limiting major corporations' greenhouse gas emissions will massively reduce the emissions in the atmosphere. Limitations & Challenges
+
+5. Limitations & Challenges
+> Some limitations to address with our project would be data on smaller countries, cities, and locations without the technology to record data properly. Our data isn’t fully complete; most of the data from our data set was self-reported rather than hand-collected. We have to count for slight inaccuracies in our data analysis. 
+In our project proposal, we targeted many different effects of climate change. It could be challenging to manage and properly analyze all the data. Studying all the different side effects of climate change could make our proposal too broad and limit its effectiveness. Comparatively, if we only focused on one specific part of climate change, we could come up with a much deeper conclusion in that specific topic. However, that would make our proposal too narrow in scope. In our proposal, we must find the middle ground of covering all of our topics while fully answering our research questions.
+
+
+Acknowledgements
+> 
+- Data (https://doi.pangaea.de/10.1594/PANGAEA.884141) 
+- Data visualizer (https://www.nature.com/articles/sdata2018280?WT.ec_id=SDATA-201901#Sec14) 
+
 
 ### Summary Information
 
