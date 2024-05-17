@@ -5,11 +5,9 @@ library(dplyr)
 library(readxl)
 library(ggplot2)
 
-# Set working directory to the location of the file
-setwd("/Users/ryan1/INFO201/exploratory-analysis-ryan1kang03/SCRIPTS/DATA")
-
-# Load the data from the specified path
-emissions_data <- read_excel("D_FINAL.xlsx", sheet = 1)
+# Load the data using the absolute path
+file_path <- "C:/Users/ryan1/OneDrive/Desktop/INFO201/exploratory-analysis-ryan1kang03/SCRIPTS/DATA/D_FINAL.xlsx"
+emissions_data <- read_excel(file_path, sheet = 1)
 
 # Select relevant columns
 emissions_data <- emissions_data %>% 
@@ -31,4 +29,3 @@ ggplot(top_10_countries, aes(x = reorder(Country, -Total_Emissions_CDP), y = Tot
                                "darkseagreen2", "darkseagreen", "darkolivegreen", "darkgreen", "black")) +
   labs(x = "Country", y = "Total Emissions (CDP) [tCO2-eq]", title = "Top 10 Countries with Highest CO2 Emissions (CDP)") +
   theme_minimal()
-
