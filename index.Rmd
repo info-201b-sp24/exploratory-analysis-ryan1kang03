@@ -137,6 +137,7 @@ Write a summary paragraph of findings that includes the 5 values calculated from
 Include a table of aggregate information
 
 Describe why you included the table and what information it reveals
+    - The table allows you to more easily find the important information from the dataset. It filters out a majority of the na values and groups the data by their Emission Quality Flag rating and sorts by how much greenhouse gas a person emits. The original dataset had almost 200 columns and the column names were hard to read and understand. Renaming and reordering the columns allows the data to be much more legible and easier to understand.
 
 ### Chart 1
 
