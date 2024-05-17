@@ -1,4 +1,4 @@
-## Top 10 Countries and Emissions Bar Chart
+## Top 7 Countries and Emissions
 
 # Load libraries
 library(dplyr)
@@ -20,12 +20,15 @@ colnames(emissions_data) <- c("Scope1_Emissions", "Total_Emissions_CDP", "Countr
 sorted_data <- emissions_data %>% arrange(desc(Total_Emissions_CDP))
 
 # Select the top 10 countries
-top_10_countries <- head(sorted_data, 10)
+top_7_countries <- head(sorted_data, 10)
+
+# Print the data to verify
+print(top_7_countries)
 
 # Create the bar chart
-ggplot(top_10_countries, aes(x = reorder(Country, -Total_Emissions_CDP), y = Total_Emissions_CDP, fill = Country)) +
+ggplot(top_7_countries, aes(x = reorder(Country, -Total_Emissions_CDP), y = Total_Emissions_CDP, fill = Country)) +
   geom_bar(stat = "identity") +
   scale_fill_manual(values = c("darkseagreen2", "darkseagreen", "darkolivegreen", "darkgreen", "black", 
                                "darkseagreen2", "darkseagreen", "darkolivegreen", "darkgreen", "black")) +
-  labs(x = "Country", y = "Total Emissions (CDP) [tCO2-eq]", title = "Top 10 Countries with Highest CO2 Emissions (CDP)") +
+  labs(x = "Country", y = "Total Emissions (CDP) [tCO2-eq]", title = "Top 7 Countries with Highest CO2 Emissions (CDP)") +
   theme_minimal()
