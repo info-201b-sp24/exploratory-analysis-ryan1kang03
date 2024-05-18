@@ -10,6 +10,7 @@ output: html_document
 source("chart1.R")
 source("chart2.R")
 source("chart3.R")
+source("Info201Table.R")
 ```
 
 ## Climate Change Affects
@@ -142,7 +143,10 @@ Acknowledgements
 Our analysis revealed that China, Japan, the Netherlands, South Korea, Taiwan, the United Kingdom, and the USA are among the top contributors to CO2 emissions according to the CDP datasets. Additionally, we could identify a notable correlation between gas prices and CO2 emissions; higher gas prices are associated with lower CO2 emissions per capita, likely due to reduced fuel consumption. Emissions flag ratings were also mapped out, so that we could easily identify geographic regions with their respsective impact on CO2 emissions. Ultimately, this highlights the areas with significant impact on the global ecosystem. This underscores the importance of both economic factors and regional policies in addressing climate change. Given this information, we could tackle the problem of climate change more effectively, by narrowing down the many factors that contribute, such as the CO2 emissions per country and regions. 
 
 ### Table
-
+```{r sort, echo = FALSE }
+#load table
+sort
+```
 Include a table of aggregate information
 
 Describe why you included the table and what information it reveals
