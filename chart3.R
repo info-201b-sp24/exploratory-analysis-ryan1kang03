@@ -14,5 +14,6 @@ data <- read_excel("./D_FINAL.xlsx") %>%
 
 # plot data as scatter plot
 chart3 <- ggplot(data, aes(x = `Gasoline price (GEA+) [USD/liter]`, y = `Emissions per Person (CDP) [tCo2-eq]`)) +
-  geom_point() +
+  geom_point(col = "darkseagreen") +
+  stat_smooth(method = lm, se = FALSE, color = "black") +
   labs(title = "Gasoline Price Vs Emissions", x = "Gas Price (USD / Liter)", y = "Average Emissions per Person (tCO2-eq)")

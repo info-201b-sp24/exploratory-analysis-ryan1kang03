@@ -167,7 +167,7 @@ This map intends to show the relationship between where a city is geographically
 
 ### Chart 3
 
-```{r chart3, echo = FALSE}
+```{r chart3, echo = FALSE, message = FALSE}
 # load chart 3
 chart3
 ```
