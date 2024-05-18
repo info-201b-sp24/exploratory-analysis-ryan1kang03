@@ -23,7 +23,7 @@ c_data <- data %>%
 c_data_na <- c_data %>%
   filter(!is.na(Total_emissions))
 
-sort <- sort %>%
+sort <- c_data_na %>%
   mutate(Emissions_per_person = round(Total_emissions/Population, 2)) %>%
   group_by(Emissions_Quality_Flag)
 
