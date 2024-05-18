@@ -6,7 +6,7 @@ library(readxl)
 library(ggplot2)
 
 # Load the data using the absolute path
-file_path <- "C:/Users/ryan1/OneDrive/Desktop/INFO201/exploratory-analysis-ryan1kang03/SCRIPTS/DATA/D_FINAL.xlsx"
+file_path <- "./D_FINAL.xlsx"
 emissions_data <- read_excel(file_path, sheet = 1)
 
 # Select relevant columns
