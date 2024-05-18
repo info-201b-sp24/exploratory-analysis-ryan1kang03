@@ -8,6 +8,7 @@ output: html_document
 # Load results from the analysis
 # Errors and messages will not be printed because `include` is set to FALSE
 source("chart1.R")
+source("chart2.R")
 ```
 
 ```{r setup, include = FALSE}
@@ -161,9 +162,15 @@ chart1
 
 ### Chart 2
 
+
 Include a chart
+```{r chart2, echo = false}
+# load chart 2
+chart2
+```
 
 Describe why you chose this chart and what information it reveals
+This map intends to show the relationship between where a city is geographically and its emmissions flag rating. This intends to show if where a city is has an impact on what kinds and how much emissions it produce. 
 
 ### Chart 3
 
