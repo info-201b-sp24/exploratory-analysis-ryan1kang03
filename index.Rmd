@@ -9,11 +9,6 @@ output: html_document
 # Errors and messages will not be printed because `include` is set to FALSE
 source("chart1.R")
 source("chart2.R")
-```
-
-```{r setup, include = FALSE}
-# Load results from the analysis
-# Errors and messages will not be printed because `include` is set to FALSE
 source("chart3.R")
 ```
 
