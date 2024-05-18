@@ -7,6 +7,7 @@ output: html_document
 ```{r setup, include = FALSE}
 # Load results from the analysis
 # Errors and messages will not be printed because `include` is set to FALSE
+source("chart1.R")
 source("chart2.R")
 source("chart3.R")
 ```
@@ -149,61 +150,19 @@ Describe why you included the table and what information it reveals
 
 ### Chart 1
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r}
-# Load libraries
-library(dplyr)
-library(readxl)
-library(ggplot2)
-```
-
-```{r}
-# Load the data using the absolute path
-file_path <- "./D_FINAL.xlsx"
-emissions_data <- read_excel(file_path, sheet = 1)
-
-# Select relevant columns
-emissions_data <- emissions_data %>% 
-  select(`Scope-1 GHG emissions [tCO2 or tCO2-eq]`, `Total emissions (CDP) [tCO2-eq]`, Country)
-
-# Rename columns for convenience
-colnames(emissions_data) <- c("Scope1_Emissions", "Total_Emissions_CDP", "Country")
-
-# Sort the data by Total Emissions (CDP) column in descending order
-sorted_data <- emissions_data %>% arrange(desc(Total_Emissions_CDP))
-
-# Select the top 10 countries
-top_7_countries <- head(sorted_data, 10)
-
-# Print the data to verify
-print(top_7_countries)
-```
-
-```{r}
-# Create the bar chart
-ggplot(top_7_countries, aes(x = reorder(Country, -Total_Emissions_CDP), y = Total_Emissions_CDP, fill = Country)) +
-  geom_bar(stat = "identity") +
-  scale_fill_manual(values = c("darkseagreen2", "darkseagreen", "darkolivegreen", "darkgreen", "black", 
-                               "darkseagreen2", "darkseagreen", "darkolivegreen", "darkgreen", "black")) +
-  labs(x = "Country", y = "Total Emissions (CDP) [tCO2-eq]", title = "Top 7 Countries with Highest CO2 Emissions (CDP)") +
-  theme_minimal()
+```{r chart1, echo = FALSE}
+# load chart 1
+chart1
 ```
 
 This bar chart shows the top 7 countries with the highest CO2 emissions. The countries are sorted by their total emissions in descending order. The chart reveals the countries that are the biggest contributors to CO2 emissions.
 
 ### Chart 2
-
-
-Include a chart
-```{r chart2, echo = false}
+```{r chart2, echo = FALSE}
 # load chart 2
 chart2
 ```
 
-Describe why you chose this chart and what information it reveals
 This map intends to show the relationship between where a city is geographically and its emmissions flag rating. This intends to show if where a city is has an impact on what kinds and how much emissions it produce. 
 
 ### Chart 3
@@ -213,4 +172,8 @@ This map intends to show the relationship between where a city is geographically
 chart3
 ```
 
-Describe why you chose this chart and what information it reveals
+This scatter plot shows the relationship between the cost of gas and the average
+emissions per person of a city. It's intent is to investigate if there is any
+correlation between the accessibility of fossil fuels to the general public and
+the amount of CO2 they release into the atmosphere in order to gauge if price
+management could be an effective control measure to help prevent climate change.
