@@ -138,7 +138,7 @@ Acknowledgements
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+Our analysis revealed that China, Japan, the Netherlands, South Korea, Taiwan, the United Kingdom, and the USA are among the top contributors to CO2 emissions according to the CDP datasets. Additionally, we could identify a notable correlation between gas prices and CO2 emissions; higher gas prices are associated with lower CO2 emissions per capita, likely due to reduced fuel consumption. Emissions flag ratings were also mapped out, so that we could easily identify geographic regions with their respsective impact on CO2 emissions. Ultimately, this highlights the areas with significant impact on the global ecosystem. This underscores the importance of both economic factors and regional policies in addressing climate change. Given this information, we could tackle the problem of climate change more effectively, by narrowing down the many factors that contribute, such as the CO2 emissions per country and regions. 
 
 ### Table
 
@@ -191,6 +191,8 @@ ggplot(top_7_countries, aes(x = reorder(Country, -Total_Emissions_CDP), y = Tota
   labs(x = "Country", y = "Total Emissions (CDP) [tCO2-eq]", title = "Top 7 Countries with Highest CO2 Emissions (CDP)") +
   theme_minimal()
 ```
+
+This bar chart shows the top 7 countries with the highest CO2 emissions. The countries are sorted by their total emissions in descending order. The chart reveals the countries that are the biggest contributors to CO2 emissions.
 
 ### Chart 2
 
