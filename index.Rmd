@@ -7,6 +7,7 @@ output: html_document
 ```{r setup, include = FALSE}
 # Load results from the analysis
 # Errors and messages will not be printed because `include` is set to FALSE
+source("summary.R")
 source("chart1.R")
 source("chart2.R")
 source("chart3.R")
@@ -140,7 +141,24 @@ Acknowledgements
 
 ### Summary Information
 
-Our analysis revealed that China, Japan, the Netherlands, South Korea, Taiwan, the United Kingdom, and the USA are among the top contributors to CO2 emissions according to the CDP datasets. Additionally, we could identify a notable correlation between gas prices and CO2 emissions; higher gas prices are associated with lower CO2 emissions per capita, likely due to reduced fuel consumption. Emissions flag ratings were also mapped out, so that we could easily identify geographic regions with their respsective impact on CO2 emissions. Ultimately, this highlights the areas with significant impact on the global ecosystem. This underscores the importance of both economic factors and regional policies in addressing climate change. Given this information, we could tackle the problem of climate change more effectively, by narrowing down the many factors that contribute, such as the CO2 emissions per country and regions. 
+Our analysis revealed that `r paste(by_countries$Country[1:4], sep = ", ")`, and
+`r by_countries$Country[5]` are among the top contributors to CO2 emissions
+according to the CDP datasets. The city with the highest emissions per person
+was `r high_ratio`. Additionally, we could identify a notable correlation between gas prices and CO2 emissions; higher gas prices are associated with lower CO2
+emissions per capita, likely due to reduced fuel consumption. Emissions flag
+ratings were also mapped out, so that we could easily identify geographic
+regions with their respective impact on CO2 emissions, with the top producers
+being `r paste(by_regions$Region[1:2],sep = ", ")`, and `r by_regions$Region[3]`.
+Ultimately, this highlights the areas with significant impact on the global
+ecosystem. This underscores the importance of both economic factors and regional
+policies in addressing climate change. Given this information, we could tackle
+the problem of climate change more effectively, by narrowing down the many
+factors that contribute, such as the CO2 emissions per country and regions. We
+also did some investigating into how the data was collected, specifically which
+gases were counted as emissions, and found that the most commonly recorded
+groups were `r paste(gas_occurances$"Gases included (CDP)"[2:3], sep = ", ")`, 
+and `r gas_occurances$"Gases included (CDP)"[4]`, and the group with the highest
+average emissions was `r gas_avg$"Gases included (CDP)"[1]`.
 
 ### Table
 ```{r sort, echo = FALSE }
