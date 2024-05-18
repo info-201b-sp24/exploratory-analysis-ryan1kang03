@@ -26,7 +26,7 @@ top_7_countries <- head(sorted_data, 10)
 print(top_7_countries)
 
 # Create the bar chart
-chart 1 <- ggplot(top_7_countries, aes(x = reorder(Country, -Total_Emissions_CDP), y = Total_Emissions_CDP, fill = Country)) +
+chart1 <- ggplot(top_7_countries, aes(x = reorder(Country, -Total_Emissions_CDP), y = Total_Emissions_CDP, fill = Country)) +
   geom_bar(stat = "identity") +
   scale_fill_manual(values = c("darkseagreen2", "darkseagreen", "darkolivegreen", "darkgreen", "black", 
                                "darkseagreen2", "darkseagreen", "darkolivegreen", "darkgreen", "black")) +
