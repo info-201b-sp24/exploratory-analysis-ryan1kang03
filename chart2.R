@@ -27,7 +27,7 @@ palette <- colorFactor(palette = c("darkseagreen2", "darkseagreen", "darkolivegr
                        levels = c("A", "B", "C", "D", "E"), na.color = "grey")
 
 
-climate_change %>%
+chart2 <- climate_change %>%
   leaflet() %>%
 
     addCircleMarkers(
