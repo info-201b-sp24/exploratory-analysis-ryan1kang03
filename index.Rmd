@@ -147,12 +147,10 @@ Describe why you included the table and what information it reveals
 
 ### Chart 1
 
-Include a chart
-
-Describe why you chose this chart and what information it reveals
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
+```{r chart 1, echo = FALSE}
+# load chart 1
+chart 1
+```
 
 ### Chart 2
 
